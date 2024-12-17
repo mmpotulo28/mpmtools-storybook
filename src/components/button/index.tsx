@@ -7,6 +7,7 @@ interface iButtonProps {
 	iconEnd?: React.ReactNode;
 	label?: string | ReactElement;
 	className?: string;
+	onClickFn?: () => void;
 }
 
 const Button: React.FC<iButtonProps> = ({
@@ -15,10 +16,11 @@ const Button: React.FC<iButtonProps> = ({
 	iconEnd,
 	label = "Button",
 	className = "",
+	onClickFn = () => {},
 }) => {
 	return (
 		<button
-			onClick={() => {}}
+			onClick={onClickFn}
 			className={`${styles.button} ${styles[variant]} ${styles[size]} ${className}`}>
 			{label}
 			{iconEnd && <span>{iconEnd}</span>}
