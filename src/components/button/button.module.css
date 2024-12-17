@@ -1,0 +1,56 @@
+.button {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid #007bff;
+}
+
+.button:hover {
+	cursor: pointer;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+	background-color: #007bff;
+	color: white;
+	border-color: #007bff;
+	transform: translate(2px, 2px);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button.primary {
+	background-color: #007bff;
+	color: white;
+	border-color: #007bff;
+}
+
+/* secondary button */
+.button.secondary {
+	background-color: white;
+	color: #007bff;
+}
+
+/* tertiary button */
+.button.tertiary {
+	background-color: transparent;
+	color: #007bff;
+	border-color: transparent;
+	font-weight: bold;
+}
+
+/* small button (sm)*/
+.button.sm {
+	font-size: 12px;
+}
+
+/* medium button (md)*/
+.button.md {
+	font-size: 14px;
+}
+
+/* large button (lg)*/
+.button.lg {
+	font-size: 16px;
+}

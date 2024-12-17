@@ -1,0 +1,63 @@
+.lockup {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-self: flex-start;
+	gap: 0;
+	padding: 10px 0;
+}
+
+.lockup h1 {
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+}
+
+.lockup p {
+	padding: 0;
+	margin: 0;
+	color: grey;
+}
+
+.lockup span {
+	padding: 0;
+	margin: 0;
+	color: blue;
+	font-weight: bold;
+}
+
+/* lockup small size */
+.lockup.sm {
+	& h1 {
+		font-size: 22px;
+	}
+
+	& p,
+	& span {
+		font-size: 12px;
+	}
+}
+
+/* lockup medium size */
+.lockup.md {
+	& h1 {
+		font-size: 26px;
+	}
+
+	& p,
+	& span {
+		font-size: 16px;
+	}
+}
+
+/* lockup large size */
+.lockup.lg {
+	& h1 {
+		font-size: 30px;
+	}
+
+	& p,
+	& span {
+		font-size: 18px;
+	}
+}
