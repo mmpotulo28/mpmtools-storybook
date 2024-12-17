@@ -6,7 +6,7 @@ import Button from "../button";
 
 export interface iCardProps {
 	overline?: string;
-	title?: string;
+	title: string;
 	subtitle?: string;
 	content: string | ReactElement;
 	image?: {
@@ -25,9 +25,9 @@ export interface iCardProps {
 
 const Card: React.FC<iCardProps> = ({
 	overline = "",
-	title = "Default Title",
+	title,
 	subtitle = "",
-	content = "lorem ipsum",
+	content = "",
 	image = {
 		src: "https://via.placeholder.com/150",
 		alt: "Placeholder Image",
@@ -50,11 +50,16 @@ const Card: React.FC<iCardProps> = ({
 }) => {
 	return (
 		<div className={`${styles.card} ${styles[variant]} ${styles[orientation]} ${styles[size]}`}>
-			<Image src={image.src} alt={image.alt || "card Image"} height={250} width={250} />
+			<div className={styles.cardHeader}>
+				<Image src={image.src} alt={image.alt || "card Image"} height={250} width={250} />
+				<span className={styles.imageAlt}>{image.alt}</span>
+			</div>
 
 			<div className={styles.cardContent}>
-				<LockUp overline={overline} title={title} subtitle={subtitle} />
-				<p>{content}</p>
+				<div className={styles.content}>
+					<LockUp overline={overline} title={title} subtitle={subtitle} />
+					<p>{content}</p>
+				</div>
 
 				<div className={styles.cardActions}>
 					{actions[0] && (

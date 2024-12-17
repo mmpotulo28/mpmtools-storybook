@@ -39,10 +39,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {
-		overline: "Overline Text",
+		overline: "overline",
 		title: "Card Title",
-		subtitle: "Card Subtitle",
-		content: "This is the card content.",
+		subtitle: "subline text",
+		content: "card content, can be anuhting from 0 characters to 256 characters. ",
 		image: {
 			src: "https://via.placeholder.com/150",
 			alt: "Placeholder Image",
@@ -59,8 +59,35 @@ export const Default: Story = {
 				icon: <></>,
 			},
 		],
-		orientation: "landscape",
+		orientation: "portrait",
 		variant: Variant.Primary,
 		size: Size.Medium,
+	},
+};
+
+export const Tertiary: Story = {
+	args: {
+		overline: "overline",
+		title: "Card Title",
+		subtitle: "subline text",
+		content: "card content, can be anuhting from 0 characters to 256 characters. ",
+
+		image: {
+			src: "https://via.placeholder.com/150",
+			alt: "Placeholder Image",
+		},
+
+		actions: [
+			{
+				label: "Primary",
+				onClick: () => {},
+				icon: <></>,
+			},
+			{ label: "Secondary", onClick: () => {}, icon: <></> },
+		],
+
+		orientation: "portrait",
+		variant: Variant.Tertiary,
+		size: Size.Small,
 	},
 };
