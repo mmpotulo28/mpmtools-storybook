@@ -27,7 +27,7 @@ const Card: React.FC<iCardProps> = ({
 	overline = "",
 	title = "Default Title",
 	subtitle = "",
-	content = "Primary",
+	content = "lorem ipsum",
 	image = {
 		src: "https://via.placeholder.com/150",
 		alt: "Placeholder Image",
