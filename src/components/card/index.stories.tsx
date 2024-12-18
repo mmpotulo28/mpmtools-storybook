@@ -26,11 +26,11 @@ const meta: Meta<typeof Card> = {
 		},
 		variant: {
 			control: "radio",
-			options: Object.values(iVariant), // Adjust based on your iVariant enum
+			options: Object.values(iVariant),
 		},
 		size: {
 			control: "radio",
-			options: Object.values(iSize), // Adjust based on your iSize enum
+			options: Object.values(iSize),
 		},
 	},
 };
