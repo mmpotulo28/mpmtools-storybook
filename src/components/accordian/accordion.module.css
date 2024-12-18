@@ -1,83 +1,78 @@
 .accordion {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  overflow: hidden;
-  background-color: white;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	border-radius: 4px;
+	overflow: hidden;
+	background-color: white;
+	font-size: 16px;
 }
 
 .accordion * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.accordion h1 {
-  text-align: center;
-  background-color: white;
-  padding: 10px;
-  margin: 0;
-  border-bottom: 1px solid #ddd;
+.accordion .topContent {
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	padding: 0;
 }
 
 .accordion-item {
-  border-bottom: 1px solid #ddd;
-  transition: all 0.3s ease;
-}
-
-.accordion-item:last-child {
-  border-bottom: none;
+	border-bottom: 1px solid #ddd;
+	transition: all 0.3s ease-in;
 }
 
 .accordion-item-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 10px;
-  cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	padding: 10px 0;
+	cursor: pointer;
 }
 
 .accordion-item-header i {
-  color: blue !important;
-  background-color: red;
+	color: rgb(83, 83, 255) !important;
 }
 
 .accordion-item-header .left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: flex-start;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: flex-start;
 }
 
 .accordion-item-header h2 {
-  margin: 0;
-  font-size: 18px;
-  color: blue;
+	margin: 0;
+	font-size: 18px;
+	color: rgb(83, 83, 255);
 }
 
 .accordion-item-header h3 {
-  margin: 0;
-  font-size: 14px;
-  color: #666;
+	margin: 0;
+	font-size: 14px;
+	color: grey;
 }
 
 .accordion-item-content {
-  display: block;
-  max-height: 0;
-  padding: 0px;
-  height: fit-content;
-  /* background-color: #666; */
-  overflow: hidden;
-  transition: all 0.2s ease;
+	display: block;
+	max-height: 0;
+	height: fit-content;
+	background-color: white;
+	overflow: hidden;
+	transition: all 0.2s ease-in;
+	padding: 0px;
 }
 
 .accordion-item-content p {
-  margin: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .accordion-item.active .accordion-item-content {
-  max-height: 500px;
-  padding: 10px;
+	max-height: 500px;
+	padding: 10px 0;
 }

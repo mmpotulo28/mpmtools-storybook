@@ -1,16 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import LockUp, { Size, Variant } from "./index";
+import LockUp from "./index";
+import { iVariant, iSize } from "./types";
 
 const meta = {
 	component: LockUp,
+	tags: ["autodocs"],
 	argTypes: {
 		variant: {
-			control: { type: "select" },
-			options: Object.values(Variant),
+			control: { type: "radio" },
+			options: Object.values(iVariant),
 		},
 		size: {
-			control: { type: "select" },
-			options: Object.values(Size),
+			control: { type: "radio" },
+			options: Object.values(iSize),
 		},
 	},
 } satisfies Meta<typeof LockUp>;
@@ -24,8 +26,8 @@ export const Default: Story = {
 		overline: "Sample Overline",
 		title: "Sample Title",
 		subtitle: "Sample Subtitle",
-		variant: Variant.Primary,
-		size: Size.Medium,
+		variant: iVariant.Primary,
+		size: iSize.Medium,
 	},
 	render: (args) => <LockUp {...args} />,
 } satisfies Story;

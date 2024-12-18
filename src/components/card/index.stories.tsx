@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Card from "./index";
-import { Size, Variant } from "../lockup";
+import { iVariant, iSize } from "../lockup/types";
+import { iOrientation } from "./types";
 
 const meta: Meta<typeof Card> = {
 	title: "Components/Card",
 	component: Card,
+	tags: ["autodocs"],
 	argTypes: {
 		overline: { control: "text" },
 		title: { control: "text" },
@@ -24,11 +26,11 @@ const meta: Meta<typeof Card> = {
 		},
 		variant: {
 			control: "radio",
-			options: Object.values(Variant), // Adjust based on your Variant enum
+			options: Object.values(iVariant), // Adjust based on your iVariant enum
 		},
 		size: {
 			control: "radio",
-			options: Object.values(Size), // Adjust based on your Size enum
+			options: Object.values(iSize), // Adjust based on your iSize enum
 		},
 	},
 };
@@ -59,9 +61,9 @@ export const Default: Story = {
 				icon: <></>,
 			},
 		],
-		orientation: "portrait",
-		variant: Variant.Primary,
-		size: Size.Medium,
+		orientation: iOrientation.Portrait,
+		variant: iVariant.Primary,
+		size: iSize.Medium,
 	},
 };
 
@@ -86,8 +88,8 @@ export const Tertiary: Story = {
 			{ label: "Secondary", onClick: () => {}, icon: <></> },
 		],
 
-		orientation: "portrait",
-		variant: Variant.Tertiary,
-		size: Size.Small,
+		orientation: iOrientation.Portrait,
+		variant: iVariant.Tertiary,
+		size: iSize.Small,
 	},
 };

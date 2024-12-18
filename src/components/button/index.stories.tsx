@@ -3,13 +3,14 @@ import Button from "./index";
 
 const meta = {
 	component: Button,
+	tags: ["autodocs"],
 	argTypes: {
 		variant: {
-			control: { type: "select" },
+			control: { type: "radio" },
 			options: ["primary", "secondary", "tertiary"],
 		},
 		size: {
-			control: { type: "select" },
+			control: { type: "radio" },
 			options: ["sm", "md", "lg"],
 		},
 		iconEnd: { control: "text" },

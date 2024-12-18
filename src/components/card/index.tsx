@@ -1,27 +1,10 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import styles from "./card.module.css";
 import Image from "next/image";
-import LockUp, { Size, Variant } from "../lockup";
+import LockUp from "../lockup";
 import Button from "../button";
-
-export interface iCardProps {
-	overline?: string;
-	title: string;
-	subtitle?: string;
-	content: string | ReactElement;
-	image?: {
-		src: string;
-		alt: string;
-	};
-	actions?: Array<{
-		label: string;
-		onClick: () => void;
-		icon?: ReactElement;
-	}>;
-	orientation?: "landscape" | "portrait";
-	variant?: Variant;
-	size?: Size;
-}
+import { iCardProps, iOrientation } from "./types";
+import { iVariant, iSize } from "../lockup/types";
 
 const Card: React.FC<iCardProps> = ({
 	overline = "",
@@ -32,21 +15,10 @@ const Card: React.FC<iCardProps> = ({
 		src: "https://via.placeholder.com/150",
 		alt: "Placeholder Image",
 	},
-	actions = [
-		{
-			label: "Primary",
-			onClick: () => {},
-			icon: <></>,
-		},
-		{
-			label: "Secondary",
-			onClick: () => {},
-			icon: <></>,
-		},
-	],
-	orientation = "landscape",
-	variant = Variant.Primary,
-	size = Size.Small,
+	actions,
+	orientation = iOrientation.Portrait,
+	variant = iVariant.Primary,
+	size = iSize.Small,
 }) => {
 	return (
 		<div className={`${styles.card} ${styles[variant]} ${styles[orientation]} ${styles[size]}`}>
@@ -62,18 +34,18 @@ const Card: React.FC<iCardProps> = ({
 				</div>
 
 				<div className={styles.cardActions}>
-					{actions[0] && (
+					{actions && actions[0] && (
 						<Button
-							variant={Variant.Primary}
+							variant={iVariant.Primary}
 							key={actions[0].label}
 							label={actions[0].label}
 							iconEnd={actions[0].icon}
 							onClickFn={actions[0].onClick}
 						/>
 					)}
-					{actions[1] && (
+					{actions && actions[1] && (
 						<Button
-							variant={Variant.Secondary}
+							variant={iVariant.Secondary}
 							key={actions[1]?.label}
 							label={actions[1]?.label}
 							iconEnd={actions[1]?.icon}

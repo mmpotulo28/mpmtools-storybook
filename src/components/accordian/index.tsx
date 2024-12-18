@@ -1,51 +1,21 @@
 import React, { useState } from "react";
 import styles from "./accordion.module.css";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
+import { iAccordionProps, iAccordionItem } from "./types";
+import LockUp from "../lockup";
 
-interface AccordionItem {
-	title: string;
-	subtitle?: string;
-	content: string;
-}
-
-interface AccordionProps {
-	title?: string;
-	items: AccordionItem[];
-}
-
-const defaultItems: AccordionItem[] = [
-	{
-		title: "Item 1",
-		subtitle: "Subtitle 1",
-		content: "Content for item 1",
-	},
-	{
-		title: "Item 2",
-		subtitle: "Subtitle 2",
-		content: "Content for item 2",
-	},
-	{
-		title: "Item 3",
-		subtitle: "Subtitle 3",
-		content: "Content for item 3",
-	},
-];
-
-const Accordion: React.FC<AccordionProps> = ({ title = "Default Title", items = defaultItems }) => {
-	const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-	if (items.length < 1) {
-		items = defaultItems;
-	}
+const Accordion: React.FC<iAccordionProps> = ({ overline, title, topContent, items = [] }) => {
+	const [activeIndex, setActiveIndex] = useState<number>(0);
 
 	const handleItemClick = (index: number) => {
-		setActiveIndex(activeIndex === index ? null : index);
+		setActiveIndex(index);
 	};
 
 	return (
 		<div className={styles.accordion}>
-			{title && <h1>{title}</h1>}
-			{items?.map((item, index) => (
+			{title && <LockUp title={title} overline={overline} />}
+			<p className={styles.topContent}>{topContent}</p>
+			{items?.map((item: iAccordionItem, index: number) => (
 				<div
 					key={index}
 					className={`${styles["accordion-item"]} ${

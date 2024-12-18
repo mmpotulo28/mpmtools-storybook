@@ -1,18 +1,11 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import styles from "./button.module.css";
-
-interface iButtonProps {
-	variant?: "primary" | "secondary" | "tertiary";
-	size?: "sm" | "md" | "lg";
-	iconEnd?: React.ReactNode;
-	label?: string | ReactElement;
-	className?: string;
-	onClickFn?: () => void;
-}
+import { iButtonProps } from "./types";
+import { iSize, iVariant } from "../lockup/types";
 
 const Button: React.FC<iButtonProps> = ({
-	variant = "primary",
-	size = "md",
+	variant = iVariant.Primary,
+	size = iSize.Medium,
 	iconEnd,
 	label = "Button",
 	className = "",
