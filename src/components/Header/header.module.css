@@ -1,0 +1,221 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background);
+	padding: 0px;
+	font-size: var(--fs-small);
+}
+
+.topNav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: transparent;
+	min-height: 40px;
+	padding: 20px;
+	min-width: 100%;
+}
+
+.topNav .contacts {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 20px;
+	align-items: center;
+}
+
+.topNav .socials {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 20px;
+	align-items: center;
+	color: var(--theme-color);
+	font-size: var(--fs-large);
+}
+
+.topNav .socials i:hover {
+	color: var(--foreground);
+}
+
+.mainNav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 40px;
+	padding: 5px 40px;
+	width: 90%;
+	background-color: var(--theme-color);
+	margin: 0 auto;
+	border-radius: 10px;
+	font-size: var(--fs-medium);
+	transition: all 0.3s ease-in-out;
+}
+
+.mainNav .navItems {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 10px;
+	align-items: center;
+	min-height: 50px;
+	transition: all 0.3s ease-in-out;
+}
+
+.mainNav .navItems a {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	color: #ffffff;
+	min-height: 40px;
+	border-radius: 10px;
+	padding: 0px 10px;
+	transition: all 0.3s ease-in-out;
+}
+
+.mainNav .navItems a:hover {
+	background-color: var(--foreground);
+	color: var(--theme-color);
+}
+
+.mainNav .navLogo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	transition: all 0.3s ease-in-out;
+}
+
+.mainNav .navLogo img {
+	border-radius: 10px;
+	border: 2px solid var(--background);
+	transition: all 0.3s ease-in-out;
+	min-width: 100px;
+}
+
+.mainNav .toggleNav {
+	display: none;
+}
+
+.mainNav .search {
+	padding: 5px 10px;
+	border-radius: 10px;
+	background-color: var(--background);
+	color: var(--theme-color);
+	border: 2px solid var(--theme-color);
+	min-height: 40px;
+	margin: auto 0;
+}
+
+@media screen and (max-width: 800px) {
+	.mainNav .navItems a span {
+		display: none;
+	}
+
+	.mainNav .navItems a:hover span {
+		display: inline;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.mainNav .toggleNav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50px;
+		width: 50px;
+		margin-left: -30px;
+		font-size: var(--fs-large);
+		border: none;
+		background-color: transparent;
+		color: var(--foreground);
+	}
+
+	.mainNav .navItems.hide {
+		z-index: -1;
+		max-height: 0 !important;
+		min-height: 0 !important;
+		min-width: none !important;
+		margin-left: -50%;
+		overflow: hidden;
+		background-color: transparent;
+		color: transparent;
+	}
+
+	.mainNav .navItems {
+		margin-top: 55px;
+		display: flex;
+		flex-direction: column;
+		background-color: var(--theme-color);
+		z-index: 2;
+		align-items: flex-start;
+		padding: 10px 10px;
+		position: absolute;
+		min-width: 90%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		border-radius: 0 0 10px 10px;
+		box-shadow: 2px 4px 5px var(--background);
+	}
+
+	.mainNav .navItems a {
+		height: 50px;
+		min-width: 100%;
+		z-index: 2;
+		justify-content: flex-start;
+	}
+
+	.mainNav .navItems a span {
+		display: inline;
+	}
+
+	.mainNav {
+		max-height: 60px;
+		align-items: flex-start;
+		position: relative;
+	}
+
+	.mainNav .navItems a:hover span {
+		display: inline;
+	}
+}
+
+/* responsive design */
+@media screen and (max-width: 600px) {
+	.topNav .contacts .contact span {
+		display: none;
+		position: absolute;
+		top: -20px;
+	}
+
+	.topNav .contacts .contact {
+		position: relative;
+	}
+
+	.topNav .contacts .contact i {
+		font-size: var(--fs-large) !important;
+	}
+
+	.topNav .contacts .contact:hover,
+	.topNav .contacts .contact:focus {
+		color: var(--theme-color);
+	}
+
+	.topNav .contacts .contact:hover span,
+	.topNav .contacts .contact:focus span {
+		display: flex;
+		flex-wrap: nowrap;
+		color: var(--theme-color);
+	}
+
+	.mainNav .navLogo {
+		padding: 0;
+		margin-right: -30px;
+	}
+}
