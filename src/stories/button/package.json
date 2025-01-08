@@ -1,0 +1,14 @@
+{
+  "name": "button",
+  "version": "1.0.0",
+  "description": "Global Button Component",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "button"
+  ],
+  "author": "Manelisi Mpotulo",
+  "license": "ISC"
+}

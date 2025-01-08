@@ -1,0 +1,14 @@
+{
+  "name": "header",
+  "version": "1.0.0",
+  "description": "Global Site Header",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "header"
+  ],
+  "author": "Manelisi Mpotulo",
+  "license": "ISC"
+}

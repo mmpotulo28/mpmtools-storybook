@@ -1,0 +1,14 @@
+{
+  "name": "lockup",
+  "version": "1.0.0",
+  "description": "Lock Up for titles and headings",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lockup"
+  ],
+  "author": "Manelisi Mpotulo",
+  "license": "ISC"
+}
