@@ -1,0 +1,155 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px;
+	gap: 80px;
+	width: fit-content;
+	height: fit-content;
+	background: #0f0f10;
+}
+
+.container,
+.newsletter,
+.content,
+.actions,
+.form,
+.input,
+.button,
+.privacyText,
+.divider,
+.links,
+.footerBottom {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0;
+	border-radius: 0;
+	flex-grow: 0;
+}
+
+.container {
+	gap: 50px;
+	width: 100%;
+	align-items: center;
+}
+
+.newsletter {
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 24px;
+	min-width: 100%;
+	height: 78px;
+	color: #167ae8;
+}
+
+.content,
+.actions,
+.form {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.actions,
+.form {
+	width: 400px;
+}
+
+.actions {
+	gap: 12px;
+	height: 78px;
+}
+
+.form {
+	flex-direction: row;
+	gap: 16px;
+	height: 48px;
+}
+
+.input {
+	flex-direction: row;
+	align-items: center;
+	padding: 12px;
+	gap: 8px;
+	width: 265px;
+	height: 48px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	color: #ecfdf3;
+	font-family: "Roboto";
+	font-size: 16px;
+	line-height: 150%;
+}
+
+.button {
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 24px;
+	gap: 8px;
+	width: 119px;
+	height: 48px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	color: #167ae8;
+	font-family: "Roboto";
+	font-size: 16px;
+	line-height: 150%;
+	background-color: #0f0f10;
+}
+
+.privacyText {
+	flex-direction: row;
+	gap: 5px;
+	width: 100%;
+	height: 18px;
+	font-family: "Roboto";
+	font-size: 12px;
+	line-height: 150%;
+	color: #167ae8;
+}
+
+.divider {
+	box-sizing: border-box;
+	width: 1312px;
+	height: 1px;
+	background: #ffffff;
+	border: 1px solid #ffffff;
+}
+
+.links {
+	flex-direction: row;
+	justify-content: space-evenly;
+	gap: 40px;
+	width: 100%;
+}
+
+.links .linkGroup {
+	gap: 10px;
+	flex-direction: column;
+	color: #ecfdf3;
+	list-style-type: none;
+}
+
+.links .linkGroup ul li {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 8px 0;
+	width: 185.33px;
+	height: 37px;
+}
+
+.links .linkGroup .linkGroupTitle {
+	color: #167ae8;
+}
+
+.footerBottom {
+	gap: 32px;
+	width: 1312px;
+	height: 69px;
+	color: #167ae8;
+	font-family: "Roboto";
+	font-size: 14px;
+	line-height: 150%;
+}
