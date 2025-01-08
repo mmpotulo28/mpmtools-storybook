@@ -1,6 +1,6 @@
 {
   "name": "accordion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Global Site accordion",
   "main": "index.tsx",
   "scripts": {
@@ -10,5 +10,13 @@
     "header"
   ],
   "author": "Manelisi Mpotulo",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "lockup": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "lockup": {
+      "optional": true
+    }
+  }
 }
